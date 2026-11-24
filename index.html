@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uma página especial para Flora — a história de Ederson e Flora.">
+  <meta name="theme-color" content="#172B46">
+  <title>Para Flora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#abertura">Saltar para o conteúdo</a>
+
+  <main id="conteudo">
+
+    <!-- SECÇÃO 01 — ABERTURA -->
+    <section class="section section--abertura" id="abertura" aria-labelledby="abertura-titulo">
+      <div class="section__inner section__inner--centered">
+        <div class="abertura__ornament" aria-hidden="true">
+          <img src="assets/illustrations/flourish.svg" alt="" width="120" height="48" decoding="async">
+        </div>
+
+        <p class="eyebrow">Para Flora</p>
+
+        <h1 id="abertura-titulo" class="abertura__titulo">
+          À rapariga por trás<br>
+          <span class="abertura__destaque">do meu sorriso favorito.</span>
+        </h1>
+
+        <div class="abertura__cta">
+          <button
+            type="button"
+            class="btn-surpresa"
+            id="btn-surpresa"
+            aria-controls="carta-revelacao"
+            aria-expanded="false"
+          >
+            <span class="btn-surpresa__label">Tenho uma surpresa para ti</span>
+            <span class="btn-surpresa__line" aria-hidden="true"></span>
+          </button>
+          <p class="abertura__nota" id="surpresa-nota">A surpresa espera por ti na carta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 02 — COMO TUDO COMEÇOU -->
+    <section class="section section--origem" id="origem" aria-labelledby="origem-titulo">
+      <div class="section__inner section__inner--editorial">
+        <div class="origem__visual" aria-hidden="true">
+          <img src="assets/illustrations/connection.svg" alt="" width="160" height="160" decoding="async">
+        </div>
+
+        <div class="origem__texto">
+          <p class="eyebrow">Como tudo começou</p>
+          <h2 id="origem-titulo" class="section__titulo">Dois caminhos na mesma associação.</h2>
+          <div class="prose">
+            <p>
+              Foi através da associação de estudantes que nos conhecemos.
+            </p>
+            <p>
+              Ali aconteceu o primeiro contacto — o começo discreto de uma história
+              que ainda estamos a viver.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 03 — A NOSSA HISTÓRIA -->
+    <section class="section section--historia" id="historia" aria-labelledby="historia-titulo">
+      <div class="section__inner">
+        <header class="section__header">
+          <p class="eyebrow">A nossa história</p>
+          <h2 id="historia-titulo" class="section__titulo">Três momentos que importam.</h2>
+        </header>
+
+        <ol class="timeline" aria-label="Momentos da nossa história">
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true">
+              <span class="timeline__dot"></span>
+            </div>
+            <div class="timeline__content">
+              <p class="timeline__label">Momento 1</p>
+              <h3 class="timeline__titulo">O início</h3>
+              <p class="timeline__texto">
+                O primeiro contacto através da associação de estudantes.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true">
+              <span class="timeline__dot"></span>
+            </div>
+            <div class="timeline__content">
+              <time class="timeline__data" datetime="2026-10-20">20.10.2026</time>
+              <h3 class="timeline__titulo">O começo oficial</h3>
+              <p class="timeline__texto">
+                Início oficial da relação.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true">
+              <span class="timeline__dot timeline__dot--accent"></span>
+            </div>
+            <div class="timeline__content">
+              <time class="timeline__data timeline__data--accent" datetime="2026-11-24">24.11.2026</time>
+              <h3 class="timeline__titulo">A celebração</h3>
+              <p class="timeline__texto">
+                Celebração e primeiro beijo.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 04 — O TEU SORRISO -->
+    <section class="section section--sorriso" id="sorriso" aria-labelledby="sorriso-titulo">
+      <div class="section__inner section__inner--centered">
+        <div class="sorriso__ornament" aria-hidden="true">
+          <img src="assets/illustrations/smile-curve.svg" alt="" width="180" height="64" decoding="async">
+        </div>
+
+        <p class="eyebrow">O teu sorriso</p>
+        <h2 id="sorriso-titulo" class="sorriso__titulo">
+          Há um sorriso que fica<br>comigo.
+        </h2>
+        <p class="sorriso__mensagem">
+          O teu. Simples, verdadeiro — e uma das coisas que mais aprecio em ti.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 05 — UMA CARTA PARA FLORA -->
+    <section class="section section--carta" id="carta" aria-labelledby="carta-titulo">
+      <div class="section__inner">
+        <header class="section__header section__header--centered">
+          <p class="eyebrow">Uma carta para Flora</p>
+          <h2 id="carta-titulo" class="section__titulo">Palavras guardadas para ti.</h2>
+        </header>
+
+        <article
+          class="carta"
+          id="carta-revelacao"
+          aria-label="Carta de Ederson para Flora"
+        >
+          <div class="carta__stage">
+            <!-- Envelope decorativo: visível apenas com JS no estado fechado/abertura -->
+            <div class="carta__envelope" aria-hidden="true">
+              <div class="carta__envelope-back"></div>
+              <div class="carta__flap"></div>
+              <div class="carta__envelope-front">
+                <span class="carta__seal"></span>
+              </div>
+            </div>
+
+            <div class="carta__papel">
+              <div class="carta__canto carta__canto--tl" aria-hidden="true"></div>
+              <div class="carta__canto carta__canto--tr" aria-hidden="true"></div>
+
+              <p class="carta__saudacao">Minha querida Flora,</p>
+
+              <div class="carta__corpo">
+                <p>Escrevo-te para te dizer o quão especial tu és para mim.</p>
+                <p>
+                  Desde que nos conhecemos na associação, a nossa história ganhou um
+                  lugar muito importante no meu coração. Gosto de te ver sorrir. Esse
+                  sorriso teu é simples e fica na minha cabeça quando penso em ti.
+                </p>
+                <p>
+                  Hoje, que finalmente celebramos este momento, quero agradecer-te
+                  por seres quem és.
+                </p>
+                <p>
+                  A nossa história ainda está no começo, mas já tem momentos que
+                  guardarei com muito carinho. Espero que ainda tenhamos muitas
+                  histórias para contar, muitos motivos para sorrir e muitos momentos
+                  especiais para viver.
+                </p>
+                <p>És especial para mim, mais do que talvez imagines.</p>
+              </div>
+
+              <footer class="carta__fecho">
+                <p class="carta__despedida">Com carinho,</p>
+                <p class="carta__assinatura">Ederson</p>
+              </footer>
+            </div>
+          </div>
+
+          <p class="sr-only" id="carta-live" role="status" aria-live="polite"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 06 — O PRIMEIRO BEIJO -->
+    <section class="section section--fecho" id="fecho" aria-labelledby="fecho-titulo">
+      <div class="section__inner section__inner--centered">
+        <div class="fecho__ornament" aria-hidden="true">
+          <img src="assets/illustrations/moment.svg" alt="" width="72" height="72" decoding="async">
+        </div>
+
+        <p class="eyebrow eyebrow--on-dark">24.11.2026</p>
+
+        <h2 id="fecho-titulo" class="fecho__titulo">
+          Há momentos que merecem ficar.
+        </h2>
+
+        <p class="fecho__mensagem">E este é apenas o começo.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__texto">Feito com carinho · Project Flora</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+</body>
+</html>

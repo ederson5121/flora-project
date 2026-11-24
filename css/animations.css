@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Project Flora — animations.css
+   Fase 3: revelação da carta + prefers-reduced-motion
+   ========================================================================== */
+
+/*
+ * Selagem apenas com .js-carta (aplicada por interactions.js).
+ * Se o script falhar, a carta permanece aberta e legível.
+ */
+.js-carta .carta:not(.is-open):not(.is-opening) .carta__envelope,
+.js-carta .carta.is-opening .carta__envelope {
+  display: block;
+}
+
+.js-carta .carta:not(.is-open):not(.is-opening) .carta__stage,
+.js-carta .carta.is-opening .carta__stage {
+  min-height: var(--envelope-height);
+}
+
+/* Papel guardado: atrás da aba, invisível */
+.js-carta .carta:not(.is-open):not(.is-opening) .carta__papel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  max-height: calc(var(--envelope-height) - 0.5rem);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(1.5rem) scale(0.985);
+}
+
+/* Abertura da aba */
+.js-carta .carta.is-opening .carta__flap {
+  transform: rotateX(-168deg);
+  transition: transform var(--motion-flap);
+}
+
+.js-carta .carta.is-opening .carta__seal {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+/* Papel emerge por cima do envelope */
+.js-carta .carta.is-opening .carta__papel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  transform: translateY(-0.75rem) scale(1);
+  transition:
+    opacity var(--motion-paper) 260ms,
+    transform var(--motion-paper) 260ms,
+    visibility 0s linear 260ms;
+}
+
+.js-carta .carta.is-opening .carta__envelope {
+  transition: opacity var(--motion-envelope-fade) 500ms;
+}
+
+/* Estado final: só o papel em fluxo normal */
+.js-carta .carta.is-open .carta__papel {
+  position: relative;
+  z-index: 1;
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+
+.js-carta .carta.is-open .carta__envelope {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  max-width: 22rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 0.35rem) scale(0.97);
+  transition:
+    opacity var(--motion-envelope-fade),
+    transform var(--motion-envelope-fade),
+    visibility 0s linear 400ms;
+}
+
+.js-carta .carta.is-open .carta__stage {
+  min-height: 0;
+}
+
+/* ---------- Botão: foco e hover suaves ---------- */
+.btn-surpresa:focus-visible {
+  color: var(--color-rose);
+}
+
+.btn-surpresa:focus-visible .btn-surpresa__line {
+  opacity: 1;
+  transform: scaleX(1.04);
+}
+
+.btn-surpresa:not([aria-expanded="true"]):hover .btn-surpresa__line {
+  transform: scaleX(1.06);
+}
+
+/* ---------- Preferência de movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js-carta .carta.is-opening .carta__papel,
+  .js-carta .carta.is-open .carta__papel {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: none;
+    pointer-events: auto;
+  }
+
+  .js-carta .carta.is-open .carta__envelope,
+  .js-carta .carta.is-opening .carta__envelope {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .js-carta .carta.is-opening .carta__stage,
+  .js-carta .carta.is-open .carta__stage {
+    min-height: 0;
+  }
+}

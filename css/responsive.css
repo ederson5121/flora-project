@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Project Flora — responsive.css
+   Breakpoints: 360 · 390 · 768 · 1024 · 1440 (mobile-first)
+   ========================================================================== */
+
+/* ---------- ≥ 360px ---------- */
+@media (min-width: 360px) {
+  :root {
+    --section-pad-x: 1.5rem;
+  }
+
+  .carta__envelope {
+    max-width: 24rem;
+  }
+}
+
+/* ---------- ≥ 390px ---------- */
+@media (min-width: 390px) {
+  .carta__papel {
+    padding: var(--space-xl) 1.75rem;
+  }
+
+  :root {
+    --envelope-height: 12.5rem;
+  }
+
+  .carta__envelope {
+    max-width: 26rem;
+  }
+}
+
+/* ---------- ≥ 768px (tablet) ---------- */
+@media (min-width: 768px) {
+  :root {
+    --section-pad-y: 5.5rem;
+    --section-pad-x: 2.5rem;
+  }
+
+  .section__inner--editorial {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xl);
+    justify-content: center;
+  }
+
+  .origem__visual {
+    width: 9rem;
+  }
+
+  .origem__texto {
+    text-align: left;
+  }
+
+  .timeline {
+    max-width: 36rem;
+  }
+
+  .timeline::before {
+    left: 0.45rem;
+  }
+
+  .timeline__item {
+    gap: var(--space-lg);
+    padding-bottom: 2.75rem;
+  }
+
+  .carta__papel {
+    padding: 3rem 2.75rem;
+  }
+
+  .carta__corpo {
+    font-size: 1.2rem;
+  }
+
+  :root {
+    --envelope-height: 13.5rem;
+  }
+
+  .carta__envelope {
+    max-width: 28rem;
+  }
+
+  .sorriso__mensagem {
+    max-width: 32ch;
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- ≥ 1024px (laptop) ---------- */
+@media (min-width: 1024px) {
+  :root {
+    --section-pad-y: 6.5rem;
+    --section-pad-x: 3rem;
+  }
+
+  .section--abertura {
+    min-height: 100vh;
+  }
+
+  .abertura__titulo {
+    max-width: 20ch;
+  }
+
+  .section__inner--editorial {
+    max-width: 52rem;
+    justify-content: flex-start;
+    padding-inline: 1rem;
+  }
+
+  .origem__visual {
+    width: 10rem;
+  }
+
+  .timeline {
+    max-width: 40rem;
+  }
+
+  .carta {
+    max-width: 40rem;
+  }
+
+  .section--fecho {
+    min-height: 75vh;
+  }
+}
+
+/* ---------- ≥ 1440px ---------- */
+@media (min-width: 1440px) {
+  :root {
+    --section-pad-y: 7.5rem;
+  }
+
+  .section__inner {
+    max-width: 72rem;
+  }
+
+  .abertura__titulo {
+    font-size: 4rem;
+  }
+
+  .sorriso__titulo {
+    font-size: 3.5rem;
+  }
+
+  .fecho__titulo {
+    font-size: 3.5rem;
+  }
+}
+
+/* ---------- Ecrãs muito estreitos (≤ 320px) ---------- */
+@media (max-width: 320px) {
+  :root {
+    --section-pad-x: 1rem;
+    --section-pad-y: 3.5rem;
+  }
+
+  .abertura__titulo {
+    font-size: 1.9rem;
+  }
+
+  .btn-surpresa {
+    padding-inline: 1.1rem;
+  }
+
+  .btn-surpresa__label {
+    font-size: 0.875rem;
+  }
+
+  .carta__papel {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .carta__corpo {
+    font-size: 1.05rem;
+  }
+
+  :root {
+    --envelope-height: 10.25rem;
+  }
+
+  .carta__envelope {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Preferência de movimento reduzido tratada em animations.css ---------- */
+
+/* ---------- Orientação landscape em telemóveis ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .section--abertura {
+    min-height: auto;
+    padding-block: 3rem;
+  }
+
+  .section--fecho {
+    min-height: auto;
+    padding-block: 3.5rem;
+  }
+}
